@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".browse">
+
+    <TextView
+        android:id="@+id/browse_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="Browse"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btncart"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/browse_title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="11dp"
+        android:text="Cart" />
+
+    <Button
+        android:id="@+id/btnlogout"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/browse_title"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:text="Logout" />
+    <!-- Card view-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view1"
+        android:layout_width="393dp"
+        android:layout_height="162dp"
+        android:layout_below="@+id/btncart"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="9dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <TextView
+            android:id="@+id/headphones_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnlogout"
+            android:gravity="center_horizontal"
+            android:padding="25dp"
+            android:text="@string/air_max" />
+
+        <ImageView
+            android:id="@+id/Headphones_image"
+            android:layout_width="346dp"
+            android:layout_height="100dp"
+            android:src="@drawable/headphones" />
+
+        <TextView
+            android:id="@+id/headphones_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_description"
+            android:padding="16dp"
+            android:text="Price: $20.00" />
+
+        <TextView
+            android:id="@+id/headphones_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_price"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="11dp"
+            android:text="Quantity: 5" />
+
+        <Button
+            android:id="@+id/headphones_to_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_price"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="73dp"
+            android:layout_marginEnd="241dp"
+            android:padding="16dp"
+            android:text="Add to Cart" />
+
+    </androidx.cardview.widget.CardView>
+        <!--Second CardView-->
+
+    <!--Third CardView-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view2"
+        android:layout_width="392dp"
+        android:layout_height="162dp"
+        android:layout_below="@id/card_view1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="9dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <TextView
+            android:id="@+id/m2_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnlogout"
+            android:gravity="center_horizontal"
+            android:padding="25dp"
+            android:text="@string/macbookm2" />
+
+        <ImageView
+            android:id="@+id/m2_image"
+            android:layout_width="346dp"
+            android:layout_height="100dp"
+            android:src="@drawable/m2" />
+
+        <TextView
+            android:id="@+id/m2_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_description"
+            android:padding="16dp"
+            android:text="Price: $20.00" />
+
+        <TextView
+            android:id="@+id/m2_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_price"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="11dp"
+            android:text="Quantity: 5" />
+
+        <Button
+            android:id="@+id/m2_to_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_price"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="73dp"
+            android:layout_marginEnd="241dp"
+            android:padding="16dp"
+            android:text="Add to Cart" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view3"
+        android:layout_width="395dp"
+        android:layout_height="167dp"
+        android:layout_below="@id/card_view2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <TextView
+            android:id="@+id/watch_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnlogout"
+            android:gravity="center_horizontal"
+            android:padding="25dp"
+            android:text="@string/macbookm2" />
+
+        <ImageView
+            android:id="@+id/watch_image"
+            android:layout_width="346dp"
+            android:layout_height="100dp"
+            android:src="@drawable/watch" />
+
+        <TextView
+            android:id="@+id/watch_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_description"
+            android:padding="16dp"
+            android:text="Price: $20.00" />
+
+        <TextView
+            android:id="@+id/watch_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_price"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="11dp"
+            android:text="Quantity: 5" />
+
+        <Button
+            android:id="@+id/watch_to_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_price"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="73dp"
+            android:layout_marginEnd="241dp"
+            android:padding="16dp"
+            android:text="Add to Cart" />
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
