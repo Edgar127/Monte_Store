@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
     EditText username, password2;
-    Button btnlogin;
+    Button btnlogin, btnadmin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,15 @@ public class Login extends AppCompatActivity {
         username = findViewById(R.id.username1);
         password2 = findViewById(R.id.password1);
         btnlogin = findViewById(R.id.btnsinin1);
+        btnadmin = findViewById(R.id.btnadmin1);
+        //Create a admin route
+        btnadmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),Admin.class);
+                startActivity(intent);
+            }
+        });
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
