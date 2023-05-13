@@ -1,5 +1,6 @@
 package com.example.montestore;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -73,6 +74,12 @@ public class cart extends AppCompatActivity {
                 return true;
             }
         });
-
+        checkoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(cart.this, payment.class);
+                startActivity(intent);
+            }
+        });
     }
 }

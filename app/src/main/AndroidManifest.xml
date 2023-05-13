@@ -59,9 +59,25 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-
-
+        <!-- -->
+        <!-- Creating the payment page-->
+        <activity
+            android:name=".payment"
+            android:label="Payment"
+            android:parentActivityName=".payment">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <!-- Creating the Shipment page-->
+        <activity
+            android:name=".Shipment"
+            android:label="Shipment"
+            android:parentActivityName=".Shipment">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>
