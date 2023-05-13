@@ -59,7 +59,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
+        <!-- -->
+        <!-- Creating the payment page-->
+        <activity
+            android:name=".payment"
+            android:label="Payment"
+            android:parentActivityName=".payment">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
 
     </application>

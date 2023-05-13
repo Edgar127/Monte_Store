@@ -42,38 +42,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //Register button
-//        register.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                ///creating user entity
-//                UEntity entity = new UEntity();
-//                entity.setUserId(userId.getText().toString());
-//                entity.setPassword(password.getText().toString());
-//                entity.setName(name.getText().toString());
-//                if(validateInput(entity)){
-//                    //Insert operation
-//                    DataBase dataBase = DataBase.getDataBase(getApplicationContext());
-//                    final DAO dao = dataBase.userDao();
-//                    new Thread(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            dao.registerUser(entity);
-//                            runOnUiThread(new Runnable() {
-//                                @Override
-//                                public void run() {
-//                                    Toast.makeText(getApplicationContext(), "User Registerd",Toast.LENGTH_SHORT).show();
-//                                    Intent intent = new Intent(getApplicationContext(),browse.class);
-//                                    startActivity(intent);
-//                                }
-//                            });
-//                        }
-//                    }).start();
-//                }else{
-//                    Toast.makeText(getApplicationContext(), "Fill all the fields",Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-//    }
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
