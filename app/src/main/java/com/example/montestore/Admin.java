@@ -1,11 +1,13 @@
 package com.example.montestore;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -26,18 +28,30 @@ public class Admin extends AppCompatActivity {
         userIdList = new ArrayList<>();
 
         displayUserList();
-
         userList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Remove user from database
-                String userId = userIdList.get(position);
-                removeUser(userId);
-                // Remove user from list
-                userIdList.remove(position);
-                adapter.notifyDataSetChanged();
+                // Show confirmation dialog
+                AlertDialog.Builder builder = new AlertDialog.Builder(Admin.this);
+                builder.setMessage("Are you sure you want to delete this user?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Remove user from database
+                        String userId = userIdList.get(position);
+                        // Remove user from list
+                        userIdList.remove(position);
+                        adapter.notifyDataSetChanged();
+                        removeUser(userId);
+
+                    }
+                });
+                builder.setNegativeButton("No", null);
+                builder.show();
             }
         });
+
+
     }
 
     private void displayUserList() {
@@ -63,6 +77,8 @@ public class Admin extends AppCompatActivity {
             }
         }).start();
     }
+
+
 
     private void removeUser(final String userId) {
         DataBase dataBase = DataBase.getDataBase(getApplicationContext());
