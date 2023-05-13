@@ -52,6 +52,7 @@ public class Login extends AppCompatActivity {
                                     if (user != null) {
                                         Toast.makeText(Login.this, "Login successful", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(),browse.class);
+                                        //intent.putExtra("username", usernames);
                                         startActivity(intent);
                                     } else {
                                         Toast.makeText(Login.this, "Invalid user ID or password", Toast.LENGTH_SHORT).show();

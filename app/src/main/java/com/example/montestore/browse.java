@@ -1,5 +1,6 @@
 package com.example.montestore;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,14 +17,22 @@ public class browse extends AppCompatActivity {
     Button addHeadphones, addIpad,addM2;
     TextView card_view1,card_view2,card_view3,
     price1, price2,price3;
+    TextView usernames;
     int HeadphonesQuantity = 0;
     int WatchQuantity =0;
     int MacProQuantity=0;
     
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse);
+        Intent intent = getIntent();
+        String username = intent.getStringExtra("username");
+
+        // display the username at the top of the activity
+        usernames = findViewById(R.id.textView3);
+        usernames.setText("Welcome, " + username);
         btnlogout= findViewById(R.id.btnlogout);
         btnCart=findViewById(R.id.btncart);
         //TextView

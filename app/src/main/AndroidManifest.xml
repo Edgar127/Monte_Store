@@ -69,8 +69,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-
+        <!-- Creating the Shipment page-->
+        <activity
+            android:name=".Shipment"
+            android:label="Shipment"
+            android:parentActivityName=".Shipment">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>
